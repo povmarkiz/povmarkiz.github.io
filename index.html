@@ -91,6 +91,7 @@ body{background:var(--mist);color:var(--ink)}
 .card .c-body h3{font-size:26px;letter-spacing:-.04em;line-height:1}
 .card .c-body p{color:rgba(255,255,255,.88);margin:8px 0 14px}
 .card .c-btn{background:var(--shell);color:var(--ink)}
+.card:has(.c-btn){cursor:pointer}
 .card .c-soon{background:rgba(15,30,40,.35);border:1px solid rgba(255,255,255,.55);color:#fff}
 .card:first-child{aspect-ratio:auto}
 .card:first-child .c-body h3{font-size:clamp(34px,3.6vw,52px)}
@@ -232,4 +233,5 @@ dialog::backdrop{background:rgba(23,50,63,.5);backdrop-filter:blur(4px)}
 <script>
 document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){document.getElementById(b.dataset.open).showModal();});});
 document.querySelectorAll('dialog').forEach(function(d){d.addEventListener('click',function(e){if(e.target===d||e.target.closest('[data-close]'))d.close();});});
+document.querySelectorAll('.card').forEach(function(c){var a=c.querySelector('a.c-btn');if(!a)return;c.addEventListener('click',function(e){if(e.target.closest('a'))return;window.open(a.href,a.target||'_self','noopener');});});
 </script></body></html>
