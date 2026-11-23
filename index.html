@@ -77,8 +77,10 @@ body{background:var(--mist);color:var(--ink)}
 @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.card:first-child{grid-column:span 2}.card:first-child .c-ph{aspect-ratio:16/10}}
 
 @media (max-width:560px){.grid{gap:10px}.card:first-child{grid-column:auto}.card:first-child .c-ph{aspect-ratio:4/5;flex:none}.card:first-child .c-ph img{position:static}.card:first-child h3{font-size:18px}.c-body{padding:12px 12px 14px}.c-body h3{font-size:18px}.c-body p{display:none}.c-date{font-size:11px;padding:5px 9px;left:8px;top:8px}.c-foot{margin-top:10px;flex-wrap:wrap;gap:6px}.c-btn,.c-soon{font-size:13px;padding:8px 12px}.c-price{font-size:11px;padding:5px 9px;right:auto;top:auto;left:8px;bottom:8px}.more{display:flex}}
-.vsw{position:fixed;left:12px;bottom:12px;z-index:90;display:flex;gap:4px;background:rgba(23,50,63,.85);padding:4px;border-radius:999px;backdrop-filter:blur(8px)}.vsw a{color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:999px}
+.vsw{display:none}.vsw a{color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:999px}
 /* v7: текст на фото */
+.plans-sec,.frag-sec,.about2,.end{content-visibility:auto;contain-intrinsic-size:auto 700px}
+.card .c-ph img{will-change:auto}
 .card{position:relative;aspect-ratio:4/5;color:#fff;isolation:isolate;justify-content:flex-end;background:var(--ink)}
 .card .c-ph{position:absolute;inset:0;aspect-ratio:auto;z-index:-1}
 .card .c-ph img{position:absolute;inset:0}
@@ -89,7 +91,7 @@ body{background:var(--mist);color:var(--ink)}
 .card .c-body h3{font-size:26px;letter-spacing:-.04em;line-height:1}
 .card .c-body p{color:rgba(255,255,255,.88);margin:8px 0 14px}
 .card .c-btn{background:var(--shell);color:var(--ink)}
-.card .c-soon{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.55);color:#fff;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.card .c-soon{background:rgba(15,30,40,.35);border:1px solid rgba(255,255,255,.55);color:#fff}
 .card:first-child{aspect-ratio:auto}
 .card:first-child .c-body h3{font-size:clamp(34px,3.6vw,52px)}
 @media (max-width:1000px){.card:first-child{aspect-ratio:16/10}}
@@ -191,7 +193,7 @@ dialog::backdrop{background:rgba(23,50,63,.5);backdrop-filter:blur(4px)}
 .ab p{font-size:17px;line-height:1.65;margin-bottom:14px;max-width:62ch}
 </style></head><body>
 <header class="hero">
-<picture><source media="(max-width:760px)" srcset="assets/img/hero2-m.webp"><img src="assets/img/hero2.webp" alt="Закат над бухтой в Турции"></picture>
+<picture><source media="(max-width:760px)" srcset="assets/img/hero2-m-750.webp 750w, assets/img/hero2-m.webp 1000w" sizes="100vw"><img src="assets/img/hero2-1600.webp" srcset="assets/img/hero2-1600.webp 1600w, assets/img/hero2.webp 2000w" sizes="100vw" alt="Закат над бухтой в Турции" fetchpriority="high" decoding="async"></picture>
 <div class="wrap hero-in"><h1>The Crew</h1><p>Туры по любимым местам <a href="https://instagram.com/pov.markiz" target="_blank" rel="noopener">@pov.markiz</a> и <a href="https://instagram.com/osssipskeka" target="_blank" rel="noopener">@osssipskeka</a></p></div>
 
 </header>
